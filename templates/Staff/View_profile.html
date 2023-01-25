@@ -1,0 +1,38 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+<div align="center">
+<table class="table table-bordered"  style="width: 500px;">
+  <tr>
+    <th scope="row">STAFF NAME</th>
+    <td>
+      <input type="text" name="textfield" id="textfield" value="{{ data['staff_name'] }}" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">PHONE.NO</th>
+    <td><input type="text" name="textfield2" id="textfield2"  value="{{ data['phone_no'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">EMAIL ID</th>
+    <td><input type="text" name="textfield3" id="textfield3"  value="{{ data['email_id'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">QUALIFICATION</th>
+    <td><input type="text" name="textfield4" id="textfield4"   value="{{ data['qualification'] }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">ADHAAR NO</th>
+    <td><input type="text" name="textfield5" id="textfield5"   value="{{ data['adhaar_no'] }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">PROFILE PHOTO</th>
+    <td><img src="{{ data['profile_pic'] }}" alt="no photo" height="100" width="100"/>
+
+    </td>
+  </tr>
+
+</table>
+</div>
+</form>
+{% endblock %}

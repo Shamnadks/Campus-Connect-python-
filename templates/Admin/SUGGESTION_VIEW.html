@@ -1,0 +1,19 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th width="43" height="81" scope="col">#</th>
+      <th width="74" scope="col">SUGGESTION</th>
+      <th width="66" scope="col">USERNAME</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;{{ i['suggestion'] }}</td>
+      <td>{{ i['username'] }}&nbsp;</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

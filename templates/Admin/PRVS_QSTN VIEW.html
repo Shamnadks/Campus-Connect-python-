@@ -1,0 +1,25 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table width="393" height="253" border="1">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">YEAR</th>
+      <th scope="col">SEMESTER</th>
+      <th scope="col">QSTN PAPER</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;{{ i['year'] }}</td>
+      <td>{{ i['semester'] }}&nbsp;</td>
+      <td>{{ i['question_paper'] }}&nbsp;</td>
+      <td><p>&nbsp;</p>
+      <p><a href="#">EDIT</a></p>
+      <p><a href="#">DELETE</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

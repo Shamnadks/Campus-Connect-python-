@@ -1,0 +1,25 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+ <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th width="43" height="81" scope="col">#</th>
+      <th width="74" scope="col">YEAR</th>
+      <th width="66" scope="col">SEMESTER</th>
+      <th width="66" scope="col">cOURSE</th>
+      <th width="66" scope="col">SUBJECT</th>
+      <th width="66" scope="col">QUESTION PAPERS</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;{{ i['year'] }}</td>
+      <td>{{ i['semester'] }}&nbsp;</td>
+      <td>{{ i['course'] }}</td>
+      <td>{{ i['subject'] }}</td>
+      <td><a href="{{ i['question_paper'] }}">DOWNLOAD</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

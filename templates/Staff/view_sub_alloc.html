@@ -1,0 +1,29 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<div align="center">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">SUBJECT </th>
+      <th scope="col">SEMESTER</th>
+        <th></th>
+      </tr>
+      {% for i in data %}
+    <tr>
+        <td>&nbsp{{ loop.index }}</td>
+        <td>{{ i['subject']}}</td>
+        <td>{{ i['semester'] }}</td>
+    <td>
+        <a href="/v_note/{{ i['subject_id'] }}">View Notes</a> <br>
+        <a href="/v_focus/{{ i['subject_id'] }}">View Focus Area</a> <br>
+        <a href="/v_pqr/{{ i['subject_id'] }}">View Previous Question</a> <br>
+        <a href="/v_video/{{ i['subject_id'] }}">View Video</a> <br>
+    </td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+{% endblock %}

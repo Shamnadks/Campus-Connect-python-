@@ -1,0 +1,31 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">ADHAAR NO</th>
+      <th scope="col">PROFILE PIC</th>
+      <th scope="col">EMAIL ID</th>
+      <th scope="col">PHONE NO</th>
+      <th scope="col">COURSE</th>
+      <th scope="col">BATCH</th>
+      <th scope="col">INSTITUTION</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['username'] }}&nbsp;</td>
+      <td>{{ i['adhar_number'] }}</td>
+      <td>{{i['profile_pic'] }}</td>
+      <td>&nbsp;{{ i['email_id'] }}</td>
+      <td>{{ i['phone_no'] }}&nbsp;</td>
+      <td>{{ i['course'] }}</td>
+      <td>{{ i['batch'] }}</td>
+      <td>{{ i['institution'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

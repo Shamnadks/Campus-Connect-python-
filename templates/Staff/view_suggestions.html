@@ -1,0 +1,21 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">STUDENT NAME</th>
+      <th scope="col">SUGGESTIONS</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['username'] }}</td>
+        <td>{{ i['suggestion'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+
+</form>
+{% endblock %}

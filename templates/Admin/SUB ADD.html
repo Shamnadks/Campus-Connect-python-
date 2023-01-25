@@ -1,0 +1,41 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<div align="center">
+  <table class="table table-bordered"  style="width: 500px;">
+        <tr>
+          <th>COURSE</th>
+          <td>
+              <select name="s">
+                  <option>--select--</option>
+                  {% for i in data %}
+                  <option value="{{ i['course_id'] }}">{{ i['course'] }}</option>
+                  {% endfor %}
+
+              </select>
+          </td>
+      </tr>
+    <tr>
+      <th scope="row">SUBJECT</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" class="form-control"/></td>
+    </tr>
+    <tr>
+      <th scope="row">SEMESTER</th>
+      <td><select name="sem">
+          <option>--select--</option>
+          <option value="SEM 1">SEM 1</option>
+          <option value="SEM 2">SEM 2</option>
+          <option value="SEM 3">SEM 3</option>
+          <option value="SEM 4">SEM 4</option>
+          <option value="SEM 5">SEM 5</option>
+          <option value="SEM 6">SEM 6</option>
+      </select> </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" scope="row"><input type="submit" name="button" id="button" value="Submit" class="btn btn-success"/></td>
+    </tr>
+  </table>
+</div>
+</form>
+{% endblock %}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="/static/main_temp/images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="/static/main_temp/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="/static/main_temp/style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="/static/main_temp/css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="/static/main_temp/css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="/static/main_temp/css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="/static/main_temp/css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="/static/main_temp/css/custom.css" />
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond./static/main_temp//static/main_temp/js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="/static/main_temp/images/logo/logo_icon.png" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img style="height: 80px; width: 80px;" class="img-responsive" src="{{ session.staff_pic }}" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>{{ session.staff_name }}</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>General</h4>
+                  <ul class="list-unstyled components">
+
+                    <li class="active">
+                         <a href="/v_profile"><i class="fa fa-user orange_color2"></i> <span>VIEW PROFILE</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/v_suballoc"><i class="fa fa-object-group yellow_color"></i> <span>VIEW SUBJECT ALLOCATED</span></a>
+                     </li>
+
+                      <li class="active">
+                         <a href="/up_note"><i class="fa fa-book blue2_color"></i> <span>UPLOAD NOTES</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/up_focus"><i class="fa fa-bookmark blue2_color"></i> <span>UPLOAD FOCUSAREA</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/up_prev"><i class="fa fa-file-text blue2_color"></i> <span>UPLOAD QUESTION PAPERS</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/up_video"><i class="fa fa-file-video-o blue2_color"></i> <span>UPLOAD VIDEO</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/v_rating"><i class="fa fa-star-o yellow_color"></i> <span>VIEW RATING</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/v_sugg"><i class="fa fa-mail-forward red_color"></i> <span>VIEW SUGGESTION</span></a>
+                     </li>
+                      <li class="active">
+                         <a href="/v_dbt"><i class="fa fa-question green_color"></i> <span>DOUBTS AND REPLY</span></a>
+                     </li>
+                        <BR>
+                       <li><a href="/logout"><i class="fa fa-power-off red_color"></i> <span>LOGOUT</span></a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="logo_section">
+                           <a href="index.html">
+{#                               <img class="img-responsive" src="/static/main_temp/images/logo/logo.png" alt="#" />#}
+                              <br>
+                               <h2 style="color: #fff;"><span style="color: #1A9181;">  LER</span>NEN</h2>
+                           </a>
+                        </div>
+                        <div class="right_topbar">
+                           <div class="icon_info" style="padding-right: 95px;">
+{#                              <ul>#}
+{#                                 <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>#}
+{#                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>#}
+{#                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>#}
+{#                              </ul>#}
+                              <ul>
+{#                                 <li>#}
+{#                                    <a  class="btn btn-danger" style="color: #fff;">#}
+{#                                        <i class="fa fa-sign-out"></i>#}
+{#                                        <img class="img-responsive rounded-circle" src="/static/main_temp/images/layout_img/user_img.jpg" alt="#" />#}
+{#                                        <a href="/logout">LOGOUT</a>#}
+{##}
+{#                                 </li>#}
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Staff Dashboard</h2>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- graph -->
+                     <div class="row column2 graph margin_bottom_30">
+                        <div class="col-md-l2 col-lg-12">
+                           <div class="white_shd full">
+                              <div class="full graph_head">
+                                  {% block body %}
+
+                                     {% endblock %}
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end graph -->
+
+
+                  </div>
+                  <!-- footer -->
+                  <div class="container-fluid">
+                     <div class="footer">
+                        <p>Copyright © 2018 Designed by html.design. All rights reserved.<br><br>
+                           Distributed By: <a href="https://themewagon.com/">ThemeWagon</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!-- end dashboard inner -->
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="/static/main_temp/js/jquery.min.js"></script>
+      <script src="/static/main_temp/js/popper.min.js"></script>
+      <script src="/static/main_temp/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="/static/main_temp/js/animate.js"></script>
+      <!-- select country -->
+      <script src="/static/main_temp/js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+      <script src="/static/main_temp/js/owl.carousel.js"></script>
+      <!-- chart js -->
+      <script src="/static/main_temp/js/Chart.min.js"></script>
+      <script src="/static/main_temp/js/Chart.bundle.min.js"></script>
+      <script src="/static/main_temp/js/utils.js"></script>
+      <script src="/static/main_temp/js/analyser.js"></script>
+      <!-- nice scrollbar -->
+      <script src="/static/main_temp/js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="/static/main_temp/js/custom.js"></script>
+      <script src="/static/main_temp/js/chart_custom_style1.js"></script>
+   </body>
+</html>

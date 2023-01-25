@@ -1,0 +1,21 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">SUBJECT</th>
+      <th scope="col">STAFF</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ i['subject'] }}</td>
+      <td>{{ i['staff_name'] }}&nbsp;</td>
+      <td><p><a href="/delete_allocation/{{ i.suballoc_id }}" onclick="return confirm('Are you sure to delete this allocation?')">DELETE</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

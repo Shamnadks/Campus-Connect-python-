@@ -1,0 +1,41 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<div align="center">
+ <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+{#      <th scope="row">SUBJECT ID</th>#}
+{#      <td><label for="select"></label>#}
+{#        <select name="select" id="select">#}
+             <th>SUBJECT</th>
+          <td>
+        <select name="select" id="select">
+                  <option>--select--</option>
+                  {% for i in data %}
+                  <option value="{{ i['subject_id'] }}">{{ i['subject'] }}</option>
+                  {% endfor %}
+{#            <option>ejp</option>#}
+
+      </select></td>
+    </tr>
+    <tr>
+      <th scope="row">STAFF</th>
+      <td><label for="select2"></label>
+        <select name="select2" id="select2">
+                              {% for i in data1 %}
+
+           <option value="{{ i.staff_id }}">{{ i.staff_name }}</option>
+                              {% endfor %}
+
+{#            <option>minu</option>#}
+{#            <option>binu</option>#}
+      </select></td>
+    </tr>
+    <tr>
+      <td height="197" colspan="2" align="center"">
+        <input type="submit" name="button" id="button" value="Submit" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</div>
+</form>
+{% endblock %}

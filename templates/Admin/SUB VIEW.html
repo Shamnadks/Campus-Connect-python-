@@ -1,0 +1,24 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">COURSE NAME</th>
+      <th scope="col">SUBJECT</th>
+      <th scope="col">SEMESTER</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td height="211">{{ loop.index }}&nbsp;</td>
+      <td height="211">{{ i.course }}</td>
+      <td>&nbsp;{{ i['subject'] }}</td>
+      <td>{{ i['semester'] }}&nbsp;</td>
+      <td><p>&nbsp;</p>
+      <p><a href="/delete_subject/{{ i.subject_id }}" onclick="return confirm('Are you sure to delete {{ i['subject'] }}?')">DELETE</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

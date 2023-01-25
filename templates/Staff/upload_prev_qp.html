@@ -1,0 +1,42 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+<div align="center">
+<table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="row">YEAR</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" /></td>
+    </tr>
+
+
+
+      <tr>
+      <th scope="row">SUBJECT</th>
+      <td><label for="select2"></label>
+        <select name="select2" id="select2">
+        <option>---select---</option>
+            {% for i in data %}
+                <option value="{{ i['subject_id'] }}">{{ i['subject'] }}</option>
+            {% endfor %}
+
+{#            <option>minu</option>#}
+{#            <option>binu</option>#}
+      </select></td>
+    </tr>
+  <tr>
+    <th scope="row">QUESTION PAPER</th>
+    <td>
+      <label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <input type="submit" name="button" id="button" value="UPLOAD" class="btn btn-success" />
+    </td>
+  </tr>
+</table>
+</div>
+</form>
+{% endblock %}

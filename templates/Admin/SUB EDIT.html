@@ -1,0 +1,20 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<table width="408" height="254" border="1">
+  <tr>
+    <th scope="row">SUBJECT</th>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" /></td>
+  </tr>
+  <tr>
+    <th scope="row">SEMESTER</th>
+    <td><form id="form1" name="form1" method="post" action="">
+      <label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" />
+    </form></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="UPDATE" /></th>
+  </tr>
+</table>
+{% endblock %}

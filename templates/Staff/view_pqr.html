@@ -1,0 +1,25 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<div align="center">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">YEAR</th>
+{#      <th scope="col">SEM</th>#}
+{#      <th scope="col">SUBJECT</th>#}
+      <th scope="col">QUESTION</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+        <td>&nbsp;{{ loop.index }}</td>
+        <td>{{ i['year'] }}</td>
+{#        <td>{{ i['semester'] }}</td>#}
+{#        <td>{{ i['subject'] }}</td>#}
+        <td><a href="{{ i['question_paper'] }}">View Question Paper</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+{% endblock %}

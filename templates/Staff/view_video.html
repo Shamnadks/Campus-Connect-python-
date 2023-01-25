@@ -1,0 +1,27 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+<div align="center">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+{#      <th scope="col">subject</th>#}
+{#      <th scope="col">semester</th>#}
+      <th scope="col">video</th>
+      <th scope="col">date</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+        <td>{{ loop.index }}</td>
+{#        <td>{{ i['subject']}}</td>#}
+{#        <td>{{ i['semester']}}</td>#}
+        <td><video width="320" height="240" controls>
+  <source src="{{ i['video'] }}" type="video/mp4">
+</video></td>
+        <td>{{ i['date'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+{% endblock %}

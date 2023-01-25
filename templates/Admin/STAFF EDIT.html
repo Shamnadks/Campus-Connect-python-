@@ -1,0 +1,42 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form2" name="form2" method="post" action="" enctype="multipart/form-data">
+<table width="383" height="237" border="1">
+  <tr>
+    <th scope="row">STAFF NAME</th>
+    <td>
+      <label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" value="{{ data['staff_name'] }}" />
+    </td>
+  </tr>
+  <tr>
+    <th scope="row">PHONE.NO</th>
+    <td><input type="text" name="textfield2" id="textfield2"  value="{{ data['phone_no'] }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">EMAIL ID</th>
+    <td><input type="text" name="textfield3" id="textfield3" value="{{ data['email_id'] }}"/></td>
+  </tr>
+  <tr>
+    <th scope="row">QUALIFICATION</th>
+    <td><input type="text" name="textfield4" id="textfield4" value="{{ data['qualification'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">ADHAAR NO</th>
+    <td><input type="text" name="textfield5" id="textfield5" value="{{ data['adhaar_no'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PROFILE PHOTO</th>
+    <td><img src="{{ data['profile_pic'] }}" alt="" height="100" width="100"/>
+      <label for="fileField"></label>
+      <input type="file" name="fileField" id="fileField" />
+   </td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row">
+      <input type="submit" name="button" id="button" value="UPDATE" />
+    </th>
+  </tr>
+</table>
+    </form>
+{% endblock %}

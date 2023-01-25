@@ -1,0 +1,22 @@
+{% extends "Staff/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="get" action="">
+<div align="center">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">SYLLABUS</th>
+      <th scope="col">FILE</th>
+{#      <th scope="col"></th>#}
+    </tr>
+      {% for i in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['syllabus'] }}</td>
+        <td><a href="{{ i['note'] }}">File</a> </td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "Admin/index.html" %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered"  style="width: 500px;">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">NAME</th>
+      <th scope="col">EMAIL ID</th>
+      <th scope="col">QUALIFICATION</th>
+      <th scope="col">ADHAAR NO</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {%  for i in ab %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ i['staff_name'] }}&nbsp;<br><img src="{{ i['profile_pic'] }}" height="150" width="150"/> </td>
+      <td>&nbsp;{{ i['email_id'] }}</td>
+      <td>{{ i['qualification'] }}&nbsp;</td>
+      <td>{{ i['adhaar_no'] }}</td>
+      <td>{{ i['phone_no'] }}&nbsp;</td>
+      <td><p><a href="/staff_edit/{{ i.staff_id }}">EDIT</a></p>
+      <p><a href="/delete_staff/{{ i.staff_id }}" onclick="return confirm('Are you sure to delete {{ i.staff_name }}?')">DELETE</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}
